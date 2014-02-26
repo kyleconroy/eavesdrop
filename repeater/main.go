@@ -13,14 +13,14 @@ func main() {
 		fmt.Fprintf(w, "Hello, %q", html.EscapeString(r.URL.Path))
 	})
 
-    ping := func() {
-        http.Get("http://localhost:8080/bar")
-    }
+	ping := func() {
+		http.Get("http://localhost:8080/bar")
+	}
 
 	go func() {
 		for {
 			log.Println("Ping")
-            ping()
+			ping()
 			time.Sleep(time.Second * 1)
 		}
 	}()

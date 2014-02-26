@@ -8,7 +8,7 @@ import (
 
 func main() {
 
-        c, err := net.ListenPacket("ip", "0.0.0.0")
+	c, err := net.ListenPacket("ip", "0.0.0.0")
 
 	if err != nil {
 		log.Fatal(err)
@@ -20,9 +20,9 @@ func main() {
 		log.Fatal(err)
 	}
 
-    var b []byte
+	var b []byte
 
-    n, _, src, err := conn.ReadFrom(b)
+	n, _, src, err := conn.ReadFrom(b)
 
 	log.Println("%+v", b)
 	log.Println("%+v", n)
