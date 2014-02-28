@@ -1,0 +1,2 @@
+coiltap: *.go
+	go build .
